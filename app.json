@@ -1,0 +1,32 @@
+{
+  "name": "Proxy Search Bot for Kapq0",
+  "description": "A Telegram bot that silently forwards search queries to @Kapq0_bot and auto-clicks the Telegram button.",
+  "repository": "https://github.com/yourusername/proxy_search_bot",
+  "keywords": ["telegram", "bot", "proxy", "pyrogram"],
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API HASH from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your bot token from BotFather",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "stack": "heroku-20"
+}
